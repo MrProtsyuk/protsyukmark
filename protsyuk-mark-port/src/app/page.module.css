@@ -40,7 +40,20 @@
   color: var(--text-primary);
 }
 
-/* Animations for text */
+.icon {
+  display: flex;
+  justify-content: center;
+  font-size: var(--page-mediumText);
+  color: var(--text-secondary);
+}
+
+/* Hover for Icon */
+.icon:hover {
+  color: var(--text-ternary);
+  cursor: grab;
+}
+
+/* Animations for text/icons */
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -63,12 +76,27 @@
   }
 }
 
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .FName p {
   animation: fadeInRight 1.2s ease-in-out forwards;
 }
 
 .LName p {
   animation: fadeInLeft 1.2s ease-in-out forwards;
+}
+
+.icon {
+  animation: fadeDown 1.5s ease-in-out forwards;
 }
 
 /* Enable hover only on non-touch devices */
@@ -122,6 +150,7 @@
 
     --text-primary: #ededed;
     --text-secondary: #999;
+    --text-ternary: #54c93083;
 
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
