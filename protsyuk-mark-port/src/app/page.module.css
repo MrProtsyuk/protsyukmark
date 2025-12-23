@@ -2,12 +2,17 @@
   --page-largeText: 100px;
   --page-mediumText: 52px;
   --page-smallText: 32px;
+  --background: url("../../public/mjy15.jpg");
 
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
+  background-image: var(--background);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -18,6 +23,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 120px 60px;
+  /* background-image: ; */
 }
 
 .FName {
@@ -28,6 +34,7 @@
   letter-spacing: -3.84px;
   justify-content: flex-start;
   color: var(--text-primary);
+  z-index: 1;
 }
 
 .LName {
@@ -38,6 +45,7 @@
   letter-spacing: -3.84px;
   justify-content: flex-end;
   color: var(--text-primary);
+  z-index: 1;
 }
 
 .icon {
@@ -145,9 +153,6 @@
   }
 
   .page {
-    --background: #000;
-    --foreground: #000;
-
     --text-primary: #ededed;
     --text-secondary: #999;
     --text-ternary: #54c93083;
